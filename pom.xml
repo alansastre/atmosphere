@@ -70,6 +70,22 @@
     
     <build>
         
+        	<plugin>
+	    <groupId>org.pitest</groupId>
+	    <artifactId>pitest-maven</artifactId>
+	    <version>1.1.9</version>
+	    <configuration>
+	        <targetClasses>
+	            <param>org.atmosphere.*</param>
+	        </targetClasses>
+		<failWhenNoMutations>false</failWhenNoMutations>
+	            <outputFormats>
+	                <outputFormat>XML</outputFormat>
+	                <outputFormat>HTML</outputFormat>                      
+	            </outputFormats>   
+	    </configuration>
+	</plugin>
+	
         <sourceDirectory>src/main/java</sourceDirectory>
         <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
